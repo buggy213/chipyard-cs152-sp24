@@ -78,7 +78,7 @@
 	url = https://github.com/ucb-bar/FFTGenerator.git
 [submodule "toolchains/riscv-tools/riscv-tests"]
 	path = toolchains/riscv-tools/riscv-tests
-	url = https://github.com/riscv-software-src/riscv-tests.git
+	url = https://github.com/ucb-bar/esp-tests.git
 [submodule "toolchains/riscv-tools/riscv-pk"]
 	path = toolchains/riscv-tools/riscv-pk
 	url = https://github.com/riscv-software-src/riscv-pk.git
