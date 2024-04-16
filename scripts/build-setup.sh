@@ -207,7 +207,7 @@ END_CONDA_ACTIVATE
 $CONDA_ACTIVATE_PREAMBLE
 conda activate $CYDIR/.conda-env/
 source $CYDIR/scripts/fix-open-files.sh
-export LAB3ROOT=$CYDIR
+export LAB5ROOT=$CYDIR
 export VERILATOR_ROOT=/home/ff/cs152/sp24/lab2/verilator
 export VCS_HOME=/share/instsww/synopsys-new/vcs/P-2019.06 # stolen from 151
 export VCS_PATH=$VCS_HOME/bin

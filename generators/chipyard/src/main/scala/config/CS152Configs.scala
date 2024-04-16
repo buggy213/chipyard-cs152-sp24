@@ -13,6 +13,12 @@ class WithNLab5Cores(
     val prev = up(TilesLocated(InSubsystem), site)
     val idOffset = up(NumTiles)
     val lab5 = RocketTileParams(
+      core = RocketCoreParams(
+        mulDiv = Some(MulDivParams(
+          mulUnroll = 8,
+          mulEarlyOut = true,
+          divEarlyOut = true))
+      ),
       dcache = Some(DCacheParams(
         rowBits = site(SystemBusKey).beatBits,
         nSets = 16,
@@ -38,7 +44,6 @@ class WithNLab5Cores(
 
 class Lab5RocketConfig extends Config(
   new freechips.rocketchip.subsystem.WithoutTLMonitors ++
-  new WithNLab5Cores(1) ++
   new chipyard.config.WithSystemBusFrequency(500.0) ++
   new chipyard.config.WithMemoryBusFrequency(500.0) ++
   new chipyard.config.WithPeripheryBusFrequency(500.0) ++
